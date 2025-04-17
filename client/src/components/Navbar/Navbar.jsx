@@ -10,7 +10,7 @@ import { toast } from "react-toastify";
 
 const NavBar = () => {
 
-  const {token,setUser, setToken} = useContext(AppContext)
+  const { token, setUser, user, setToken } = useContext(AppContext)
 
   const navigate = useNavigate();
 
@@ -46,7 +46,7 @@ const NavBar = () => {
       autoClose: 3000,
       closeButton: true,
     })
-                    
+
     setExpand(false);
     navigate("/login");
   }
@@ -168,25 +168,41 @@ const NavBar = () => {
               </Link>
             </Nav.Item>
             <Nav.Item>
-            {
-              token === null  ? ( <Link
-                aria-label="Go to Shop Page"
-                className="navbar-link"
-                to="/login"
-                onClick={() => setExpand(false)}
-              > 
-                <span className="nav-link-label">Login</span>
-              </Link>):( <Link
-                aria-label="Go to Shop Page"
-                className="navbar-link"
-                onClick={()=>someFunction()}
-              >
-                <span className="nav-link-label">Logout</span>
-              </Link>)
-            }
+              {
+                token === null ? (<Link
+                  aria-label="Go to Shop Page"
+                  className="navbar-link"
+                  to="/login"
+                  onClick={() => setExpand(false)}
+                >
+                  <span className="nav-link-label">Login</span>
+                </Link>) : (<Link
+                  aria-label="Go to Shop Page"
+                  className="navbar-link"
+                  onClick={() => someFunction()}
+                >
+                  <span className="nav-link-label">Logout</span>
+                </Link>)
 
-             
+              }
+
+
             </Nav.Item>
+            {
+              !user?.isAdmin ?
+                <></>
+                :
+                <Nav.Item>
+                  <Link
+                    aria-label="Go to Shop Page"
+                    className="navbar-link"
+                    to="/dashboard"
+                    onClick={() => setExpand(false)}
+                  >
+                    <span className="nav-link-label">Dashboard</span>
+                  </Link>
+                </Nav.Item>
+            }
 
           </Nav>
         </Navbar.Collapse>
