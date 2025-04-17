@@ -1,0 +1,133 @@
+.wrapper {
+  text-align: center;
+  background-color: white;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 25px;
+  background: #f3f5f9;
+  margin: 20px auto;
+}
+
+.wrapper .row {
+  justify-content: center;
+}
+
+.wrapper .feature {
+  padding: 10px;
+  border: 4px solid white;
+}
+
+.wrapper .feature h3 {
+  font-size: 18px;
+  font-weight: 500;
+  width: fit-content;
+  margin: 0 auto !important;
+}
+
+.wrapper p {
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+/* --------------------------------------------------- login and signup ---------------------------------------  */
+.authContainer {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.auth {
+  /* border: .2px solid gray; */
+  border-radius: 5px;
+  padding: 40px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, .2);
+}
+
+.auth form {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.auth form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  height: 35px;
+  border: .5px solid gray;
+}
+
+.auth form input[type="submit"] {
+  border: 1px solid transparent;
+  cursor: pointer;
+  width: 20%;
+  border: .5px solid gray;
+  padding: 0;
+  margin-top: 40px;
+}
+
+.auth p {
+  margin-top: 20px;
+}
+
+
+
+/*  -------------------------------------- dashboard ----------------------------- */
+.dashboardContainer{
+  margin-top: 50px;
+}
+
+.dashboardContainer .dashboard div{
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboardContainer a {
+  color: black;
+  text-decoration: underline;
+
+}
+
+.dashboardContainer h4{
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+
+
+/* --------------------------------------- media query ----------------------------- */
+@media ( width < 992px){
+
+  .authContainer{
+        width: 50%
+  }
+
+  
+
+}
+
+
+@media ( width < 768px){
+
+  .authContainer{
+        width: 65%
+  }
+
+  
+
+}
+
+
+@media ( width < 576px){
+
+  .authContainer{
+        width: 90%
+  }
+
+}
