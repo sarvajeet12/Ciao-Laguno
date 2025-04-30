@@ -63,16 +63,18 @@ const ContextProvider = (props) => {
   }
 
 
+
   // bundle
   const contextValue = {
     user,
     token,
     codeEmail,
+    isLoading,
     setUser,
     setToken,
     storeTokenInLS,
     gettingValueCodeAndEmail,
-    isLoading
+  
   };
 
   return (

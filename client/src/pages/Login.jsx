@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import "../components/wrapper/style.css"
 import { Link, useNavigate } from 'react-router-dom'
@@ -9,7 +9,7 @@ import { toast } from "react-toastify";
 
 const Login = () => {
 
-    const {storeTokenInLS} = useContext(AppContext)
+    const { storeTokenInLS, reloadPage } = useContext(AppContext)
 
     const [userLoginData, setUserLoginData] = useState({
         email: "",
@@ -30,7 +30,7 @@ const Login = () => {
 
     const handleUserLoginFormData = async (e) => {
         e.preventDefault();
-const loadingToastId = toast.loading("Loading...");
+        const loadingToastId = toast.loading("Loading...");
         try {
             const response = await apiConnector("POST", auth.LOGIN_API, {
                 email: userLoginData.email,
@@ -47,28 +47,29 @@ const loadingToastId = toast.loading("Loading...");
                 });
                 navigate("/")
                 toast.update(loadingToastId, {
-                                    render: "Login Successfully",
-                                    type: "success",
-                                    isLoading: false,
-                                    autoClose: 3000,
-                                    closeButton: true,
-                                  });
+                    render: "Login Successfully",
+                    type: "success",
+                    isLoading: false,
+                    autoClose: 3000,
+                    closeButton: true,
+                });
                 // console.log("user login successfully", response);
             }
 
         } catch (error) {
             console.log(error);
             toast.update(loadingToastId, {
-                    render: error.response.data.message,
-                    type: "error",
-                    isLoading: false,
-                    autoClose: 3000,
-                    closeButton: true,
-                  });
+                render: error.response.data.message,
+                type: "error",
+                isLoading: false,
+                autoClose: 3000,
+                closeButton: true,
+            });
 
         }
 
     }
+
 
 
     return (

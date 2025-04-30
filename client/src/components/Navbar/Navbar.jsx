@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import "./navbar.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { logoImage } from "../../utils/products";
 import { AppContext } from "../../context/store";
@@ -10,7 +10,8 @@ import { toast } from "react-toastify";
 
 const NavBar = () => {
 
-  const { token, setUser, user, setToken } = useContext(AppContext)
+  const { token, setUser, user, setToken, loginReloadPage } = useContext(AppContext)
+  const [redirect, setRedirect] = useState(false);
 
   const navigate = useNavigate();
 
@@ -36,7 +37,11 @@ const NavBar = () => {
 
   // logout handler
 
+
+
+
   const someFunction = () => {
+    setRedirect(true);
     setToken(null);
     setUser(null);
     localStorage.removeItem("tokenCiao");
@@ -48,7 +53,12 @@ const NavBar = () => {
     })
 
     setExpand(false);
-    navigate("/login");
+
+  }
+
+  if (redirect) {
+    window.location.reload();
+    return <Navigate to="/login" />;
   }
 
   return (
@@ -189,19 +199,32 @@ const NavBar = () => {
 
             </Nav.Item>
             {
-              !user?.isAdmin ?
-                <></>
-                :
-                <Nav.Item>
-                  <Link
-                    aria-label="Go to Shop Page"
-                    className="navbar-link"
-                    to="/dashboard"
-                    onClick={() => setExpand(false)}
-                  >
-                    <span className="nav-link-label">Dashboard</span>
-                  </Link>
-                </Nav.Item>
+              token && <>
+                {
+                  !user?.isAdmin ?
+                    <Nav.Item>
+                      <Link
+                        aria-label="Go to Shop Page"
+                        className="navbar-link"
+                        to="/profile"
+                        onClick={() => setExpand(false)}
+                      >
+                        <span className="nav-link-label">Profile</span>
+                      </Link>
+                    </Nav.Item>
+                    :
+                    <Nav.Item>
+                      <Link
+                        aria-label="Go to Shop Page"
+                        className="navbar-link"
+                        to="/dashboard"
+                        onClick={() => setExpand(false)}
+                      >
+                        <span className="nav-link-label">Dashboard</span>
+                      </Link>
+                    </Nav.Item>
+                }
+              </>
             }
 
           </Nav>

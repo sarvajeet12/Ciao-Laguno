@@ -13,6 +13,7 @@ import GenerateCertificate from "./components/Dashboard/GenerateCertificate";
 import Certificate from "./components/Dashboard/Certificate";
 import SearchCertificate from "./components/Dashboard/Search-certificate";
 import GenerateCertificateId from "./components/Dashboard/GenerateCertificateId";
+import Profile from "./pages/Profile";
 
 
 // Importazione lazy dei componenti delle pagine per il caricamento dinamico
@@ -66,6 +67,9 @@ function App() {
           <Route path="/search-certificate" element={<SearchCertificate />} />
           {/* search certificate */}
           <Route path="/dashboard/generate-certificateId" element={<GenerateCertificateId />} />
+          {/* user profile page */}
+          <Route path="/profile" element={<Profile />} />
+
         </Routes>
         {/* Footer visualizzato su tutte le pagine */}
         <Footer />
