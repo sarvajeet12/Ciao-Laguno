@@ -1,103 +1,108 @@
+/* Dashboard */
+.dashboardContainer .dashboard .dashboardLink {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 
 /* generate certificate  */
-.generateCertificateContainer .generateCertificate a{
-    color: #000;
-    text-decoration: none;
+.generateCertificateContainer .generateCertificate a {
+  color: #000;
+  text-decoration: none;
 }
 
-.generateCertificateContainer .generateCertificate h4{
-    text-align: center;
+.generateCertificateContainer .generateCertificate h4 {
+  text-align: center;
 }
 
-.generateCertificateContainer .generateCertificate form{
-    /* border: 1px solid #000; */
-    margin-top: 40px;
+.generateCertificateContainer .generateCertificate form {
+  /* border: 1px solid #000; */
+  margin-top: 40px;
 }
 
-.generateCertificateContainer .generateCertificate form div{
-    display: flex;
-    flex-direction: column;
-    row-gap: 3px;
+.generateCertificateContainer .generateCertificate form div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3px;
 }
 
-
-.generateCertificateContainer .generateCertificate form{
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
+.generateCertificateContainer .generateCertificate form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
 }
 
-
-.generateCertificateContainer .generateCertificate form input{
-    border: .1px solid gray;
-    width: 50%;
-    height: 35px;
-    padding: 0 5px;
+.generateCertificateContainer .generateCertificate form input {
+  border: 0.1px solid gray;
+  width: 50%;
+  height: 35px;
+  padding: 0 5px;
 }
 
-.generateCertificateContainer .generateCertificate form input[type="file"]{
-    padding: 1.5px 0;
+.generateCertificateContainer .generateCertificate form input[type="file"] {
+  padding: 1.5px 0;
 }
 
-.generateCertificateContainer .generateCertificate form input[type="submit"]{
-    margin-top: 40px;
+.generateCertificateContainer .generateCertificate form input[type="submit"] {
+  margin-top: 40px;
 }
 
-.generateCertificateContainer .generateCertificate form div:nth-child(5) button{
-    width: 120px;
-    height: 33px;
+.generateCertificateContainer
+  .generateCertificate
+  form
+  div:nth-child(5)
+  button {
+  width: 120px;
+  height: 33px;
 }
-
 
 /* ------------ get all certificate----------------------- */
 
-.getAllCertificateContainer{
-    /* width: 100%; */
-    /* border: 1px solid #000; */
+.getAllCertificateContainer {
+  /* width: 100%; */
+  /* border: 1px solid #000; */
 }
-.getAllCertificateContainer .getAllCertificate{
-    /* border: 1px solid #000; */
-    width: 100%;
-}
-
-.getAllCertificateContainer .getAllCertificate .cardBox{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+.getAllCertificateContainer .getAllCertificate {
+  /* border: 1px solid #000; */
+  width: 100%;
 }
 
-
-.getAllCertificateContainer .getAllCertificate .cardBox .card{
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
+.getAllCertificateContainer .getAllCertificate .cardBox {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
-.getAllCertificateContainer .getAllCertificate .cardBox .card img{
-    width: 100%;
-    height: 200px;
-    border: 1px solid #000;
-    margin-bottom: 10px;
+.getAllCertificateContainer .getAllCertificate .cardBox .card {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 }
 
-
-.getAllCertificateContainer .getAllCertificate .cardBox .card div{
-    display: flex;
+.getAllCertificateContainer .getAllCertificate .cardBox .card img {
+  width: 100%;
+  height: 200px;
+  border: 1px solid #000;
+  margin-bottom: 10px;
 }
 
-
-.getAllCertificateContainer .getAllCertificate .cardBox .card div button{
-    padding: 5px;
-    cursor: pointer;
+.getAllCertificateContainer .getAllCertificate .cardBox .card div {
+  display: flex;
 }
 
-.getAllCertificateContainer h5{
-    text-align: center;
-    width: 100%;
-    /* border: 1px solid #000; */
+.getAllCertificateContainer .getAllCertificate .cardBox .card div button {
+  padding: 5px;
+  cursor: pointer;
 }
 
+.getAllCertificateContainer h5 {
+  text-align: center;
+  width: 100%;
+  /* border: 1px solid #000; */
+}
 
 /* ---------------------- get single certificate ----------------------
  */
@@ -106,60 +111,56 @@
    
 } */
 
-.getCertificateContainer h4{
-    text-align: center;
-    margin: 20px 0;
+.getCertificateContainer h4 {
+  text-align: center;
+  margin: 20px 0;
 }
 
-.getCertificateContainer .certificateCard{
-    display: flex;
-    flex-direction: column;
+.getCertificateContainer .certificateCard {
+  display: flex;
+  flex-direction: column;
 }
 
-.getCertificateContainer .certificateCard div:nth-child(1){
+.getCertificateContainer .certificateCard div:nth-child(1) {
   /* border: 1px solid #000; */
   width: 80%;
 }
 
-.getCertificateContainer .certificateCard div:nth-child(1) img{
-    width: 100%;
-    height: 500px;
-    border: 1px solid #000;
-
+.getCertificateContainer .certificateCard div:nth-child(1) img {
+  width: 100%;
+  height: 500px;
+  border: 1px solid #000;
 }
 
-.getCertificateContainer .certificateCard div:nth-child(2){
-    /* border: 1px solid #000; */
-    padding: 15px;
-    background-color: azure;
+.getCertificateContainer .certificateCard div:nth-child(2) {
+  /* border: 1px solid #000; */
+  padding: 15px;
+  background-color: azure;
 }
 
-
-.getCertificateContainer .certificateCard div:nth-child(2) div{
-    margin-top: 40px;
+.getCertificateContainer .certificateCard div:nth-child(2) div {
+  margin-top: 40px;
 }
-.getCertificateContainer .certificateCard div:nth-child(2) span i{
-    font-size: 20px;
-    color: #000;
-    margin-right: 40px;
-}
-
-
-.getCertificateContainer .certificateCard  button{
-    padding: 5px 10px;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    margin-top: 20px;   
+.getCertificateContainer .certificateCard div:nth-child(2) span i {
+  font-size: 20px;
+  color: #000;
+  margin-right: 40px;
 }
 
-.getCertificateContainer .certificateCard  button:hover{
-    background-color: #fff;
-    color: #000;
-    border: 1px solid #000;
+.getCertificateContainer .certificateCard button {
+  padding: 5px 10px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
 }
-  
+
+.getCertificateContainer .certificateCard button:hover {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
 
 /* ---------------------------------- search certificate -------------------- */
 
@@ -168,27 +169,26 @@
 } */
 
 .searchCertificate form {
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
 }
 
-.searchCertificate form input[type="text"]{
-    width: 50%;
-    height: 33px;
-border: .1px solid #000;
-padding: 0  5px;
+.searchCertificate form input[type="text"] {
+  width: 50%;
+  height: 33px;
+  border: 0.1px solid #000;
+  padding: 0 5px;
 }
 
-.searchCertificate form input[type="submit"]{
-    width: 120px;
-    height: 33px;
-    margin-top: 20px;
+.searchCertificate form input[type="submit"] {
+  width: 120px;
+  height: 33px;
+  margin-top: 20px;
 }
 
-.getCertificateContainer{
-
-    margin-top: 50px;
+.getCertificateContainer {
+  margin-top: 50px;
 }
 
 /* ------------------------------------- generate certificate id -------------------- */
@@ -196,97 +196,96 @@ padding: 0  5px;
     border: 1px solid blue;
 } */
 
-.generateCertificateIdContainer form{
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
+.generateCertificateIdContainer form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
 }
 
-.generateCertificateIdContainer form div{
-    margin-top: 30px;
+.generateCertificateIdContainer form div {
+  margin-top: 30px;
 }
 
 .generateCertificateIdContainer form input[type="text"],
-.generateCertificateIdContainer form input[type="email"]{
-    width: 50%;
-    height: 33px;
-    border: .1px solid #000;
-    padding: 0 5px;
+.generateCertificateIdContainer form input[type="email"] {
+  width: 50%;
+  height: 33px;
+  border: 0.1px solid #000;
+  padding: 0 5px;
 }
 
-.generateCertificateIdContainer form button[type="button"]{
-    width: 120px;
-    height: 33px;
+.generateCertificateIdContainer form button[type="button"] {
+  width: 120px;
+  height: 33px;
 }
 
-.generateCertificateIdContainer form input[type="submit"]{
-    width: 120px;
-    height: 33px;
-    margin-top: 50px;
+.generateCertificateIdContainer form input[type="submit"] {
+  width: 120px;
+  height: 33px;
+  margin-top: 50px;
 }
-
 
 /*  ------------------------------ media query ---------------------- */
-@media (width < 1200px){
-    .getAllCertificateContainer .getAllCertificate .cardBox{
-        grid-template-columns: repeat(3, 1fr);
-        gap: 15px;
-    }
+@media (width < 1200px) {
+  .getAllCertificateContainer .getAllCertificate .cardBox {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
 
-    .getCertificateContainer .certificateCard div:nth-child(1){
-        width: 80%;
-      }
+  .getCertificateContainer .certificateCard div:nth-child(1) {
+    width: 80%;
+  }
 
-      .generateCertificateContainer .generateCertificate form input{
-        width: 50%;
-    }
+  .generateCertificateContainer .generateCertificate form input {
+    width: 50%;
+  }
 }
 
+@media (width < 992px) {
+  .getAllCertificateContainer .getAllCertificate .cardBox {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .getCertificateContainer .certificateCard div:nth-child(1) {
+    width: 100%;
+  }
 
-@media (width < 992px){
-    .getAllCertificateContainer .getAllCertificate .cardBox{
-        grid-template-columns: repeat(2, 1fr);
-       
-    }
-    .getCertificateContainer .certificateCard div:nth-child(1){
-        width: 100%;
-      }
+  .generateCertificateContainer .generateCertificate form input {
+    width: 80%;
+  }
 
-    .generateCertificateContainer .generateCertificate form input{
-        width: 80%;
-    }
-
-    
-    .searchCertificate form input[type="text"]{
-        width: 70%;
-    }
-
+  .searchCertificate form input[type="text"] {
+    width: 70%;
+  }
 }
 
-
-@media (width < 768px){
-    
-    .generateCertificateContainer .generateCertificate form input{
-        width: 100%;
-    }
-    .searchCertificate form input[type="text"]{
-        width: 100%;
-    }
-    .generateCertificateIdContainer form input[type="text"],
-    .generateCertificateIdContainer form input[type="email"]{
-        width: 100%;
-    }
-    .generateCertificateIdContainer form div{
-        display: flex;
-        flex-direction: column;
-    }
+@media (width < 768px) {
+  .generateCertificateContainer .generateCertificate form input {
+    width: 100%;
+  }
+  .searchCertificate form input[type="text"] {
+    width: 100%;
+  }
+  .generateCertificateIdContainer form input[type="text"],
+  .generateCertificateIdContainer form input[type="email"] {
+    width: 100%;
+  }
+  .generateCertificateIdContainer form div {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
+@media (width < 576px) {
+  .getAllCertificateContainer .getAllCertificate .cardBox {
+    grid-template-columns: repeat(1, 1fr);
+  }
 
-@media (width < 576px){
-    .getAllCertificateContainer .getAllCertificate .cardBox{
-        grid-template-columns: repeat(1, 1fr);
-        
-    }
-
+  .dashboardContainer .dashboard .dashboardLink {
+    flex-direction: column;
+    row-gap: 10px;
+    margin-bottom: 5px;
+  }
+  .dashboardContainer .dashboard .dashboardLink div{
+    text-align: center;
+  }
 }
