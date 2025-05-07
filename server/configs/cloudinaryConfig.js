@@ -8,7 +8,7 @@ const cloudinaryConnect = () => {
             api_secret: process.env.API_SECRET_KEY,
         });
     } catch (error) {
-        console.log(error);
+        console.log("Error occur while cloudinary connect", error);
     }
 };
 

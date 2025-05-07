@@ -64,7 +64,7 @@ const searchCertificateByCertificateId = async (req, resp) => {
             const gettingEmail = certificateExists.email;
 
             const userDetails = await certificateModel.findOne({ email: gettingEmail });
-            console.log("user deatails", userDetails)
+            //console.log("user deatails", userDetails)
 
             resp.status(200).json({
                 success: true,

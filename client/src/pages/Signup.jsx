@@ -29,7 +29,7 @@ const Signup = () => {
         e.preventDefault();
         const loadingToastId = toast.loading("Loading...");
 
-        console.log("signup data : ", userSignupData);
+        //console.log("signup data : ", userSignupData);
 
         try {
             const response = await apiConnector("POST", auth.SIGNUP_API, {
@@ -57,7 +57,7 @@ const Signup = () => {
             }
 
         } catch (error) {
-            console.log(error);
+            //console.log(error);
             toast.update(loadingToastId, {
                 render: error.response.data.message,
                 type: "error",

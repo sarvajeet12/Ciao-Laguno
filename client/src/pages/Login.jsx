@@ -55,7 +55,7 @@ const Login = () => {
         // console.log("user login successfully", response);
       }
     } catch (error) {
-      console.log(error);
+      //console.log(error);
       toast.update(loadingToastId, {
         render: error.response.data.message,
         type: "error",

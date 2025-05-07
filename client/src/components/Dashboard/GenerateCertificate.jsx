@@ -75,7 +75,7 @@ const GenerateCertificate = () => {
                 });
             }
         } catch (error) {
-            console.log("generate certificate : ", error);
+            //console.log("generate certificate : ", error);
             toast.update(loadingToastId, {
                 render: error.response.data.message,
                 type: "error",

@@ -29,7 +29,7 @@ const Certificate = () => {
                 setLoading(false)
             } else {
                 setSingleCertificate(response.data.response)
-                console.log("Certificate fetched successfully:", response.data.response);
+                //console.log("Certificate fetched successfully:", response.data.response);
                 setLoading(false)
             }
 

@@ -66,7 +66,7 @@ const GenerateCertificateId = () => {
 
 
         } catch (error) {
-            console.log("Error occur while generating certificate id:", error);
+            //console.log("Error occur while generating certificate id:", error);
             toast.update(loadingToastId, {
                 render: error.response.data.message,
                 type: "error",

@@ -25,7 +25,7 @@ const SearchCertificate = () => {
             if (!response.data.success) {
                 alert("Certificate not found")
             } else {
-                console.log(response.data.response)
+                //console.log(response.data.response)
                 setCertificateInfo(response.data.response)
                 setCertificateId("");
                 toast.update(loadingToastId, {
@@ -38,7 +38,7 @@ const SearchCertificate = () => {
             }
 
         } catch (error) {
-            console.log(error)
+            //console.log(error)
             toast.update(loadingToastId, {
                 render: error.response.data.message,
                 type: "error",

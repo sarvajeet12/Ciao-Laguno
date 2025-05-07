@@ -41,11 +41,11 @@ const ContextProvider = (props) => {
       } else {
         setUser(userData);
         setIsLoading(false);
-        console.log("user details", userData);
+        //("user details", userData);
       }
     } catch (error) {
       setIsLoading(false);
-      console.log("getting user details: ", error.response.data.message);
+      //console.log("getting user details: ", error.response.data.message);
     }
   };
 

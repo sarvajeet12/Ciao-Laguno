@@ -32,7 +32,7 @@ const userSignup = async (req, res) => {
 const loginUser = async (req, res) => {
     try {
         const { email, password } = req.body;
-        console.log("req body login: ", req.body)
+        // console.log("req body login: ", req.body)
 
         // Check if user exists
         const user = await userModel.findOne({ email });
