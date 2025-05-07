@@ -7,10 +7,8 @@ import { logoImage } from "../../utils/products";
 import { AppContext } from "../../context/store";
 import { toast } from "react-toastify";
 
-
 const NavBar = () => {
-
-  const { token, setUser, user, setToken, loginReloadPage } = useContext(AppContext)
+  const { token, setUser, user, setToken } = useContext(AppContext);
   const [redirect, setRedirect] = useState(false);
 
   const navigate = useNavigate();
@@ -34,11 +32,7 @@ const NavBar = () => {
   //   }
   // },[])
 
-
   // logout handler
-
-
-
 
   const someFunction = () => {
     setRedirect(true);
@@ -50,15 +44,13 @@ const NavBar = () => {
       isLoading: false,
       autoClose: 3000,
       closeButton: true,
-    })
+    });
 
     setExpand(false);
-
-  }
+  };
 
   if (redirect) {
-    window.location.reload();
-    return <Navigate to="/login" />;
+    return <Navigate to="/" />;
   }
 
   return (
@@ -178,55 +170,52 @@ const NavBar = () => {
               </Link>
             </Nav.Item>
             <Nav.Item>
-              {
-                token === null ? (<Link
+              {token === null ? (
+                <Link
                   aria-label="Go to Shop Page"
                   className="navbar-link"
                   to="/login"
                   onClick={() => setExpand(false)}
                 >
                   <span className="nav-link-label">Login</span>
-                </Link>) : (<Link
+                </Link>
+              ) : (
+                <Link
                   aria-label="Go to Shop Page"
                   className="navbar-link"
                   onClick={() => someFunction()}
                 >
                   <span className="nav-link-label">Logout</span>
-                </Link>)
-
-              }
-
-
+                </Link>
+              )}
             </Nav.Item>
-            {
-              token && <>
-                {
-                  !user?.isAdmin ?
-                    <Nav.Item>
-                      <Link
-                        aria-label="Go to Shop Page"
-                        className="navbar-link"
-                        to="/profile"
-                        onClick={() => setExpand(false)}
-                      >
-                        <span className="nav-link-label">Profile</span>
-                      </Link>
-                    </Nav.Item>
-                    :
-                    <Nav.Item>
-                      <Link
-                        aria-label="Go to Shop Page"
-                        className="navbar-link"
-                        to="/dashboard"
-                        onClick={() => setExpand(false)}
-                      >
-                        <span className="nav-link-label">Dashboard</span>
-                      </Link>
-                    </Nav.Item>
-                }
+            {token && (
+              <>
+                {!user?.isAdmin ? (
+                  <Nav.Item>
+                    <Link
+                      aria-label="Go to Shop Page"
+                      className="navbar-link"
+                      to="/profile"
+                      onClick={() => setExpand(false)}
+                    >
+                      <span className="nav-link-label">Profile</span>
+                    </Link>
+                  </Nav.Item>
+                ) : (
+                  <Nav.Item>
+                    <Link
+                      aria-label="Go to Shop Page"
+                      className="navbar-link"
+                      to="/dashboard"
+                      onClick={() => setExpand(false)}
+                    >
+                      <span className="nav-link-label">Dashboard</span>
+                    </Link>
+                  </Nav.Item>
+                )}
               </>
-            }
-
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>

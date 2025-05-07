@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import Wrapper from "../components/wrapper/Wrapper";
 import Section from "../components/Section";
 import { products, discoutProducts } from "../utils/products";
@@ -11,6 +11,9 @@ const Home = () => {
   );
   const bestSales = products.filter((item) => item.category === "sofa");
   useWindowScrollToTop();
+
+  // useEffect(() => {}, []);
+
   return (
     <Fragment>
       <SliderHome />
