@@ -20,8 +20,8 @@ cloudinaryConnect()
 // TODO: tackle cors
 
 const corsOption = {
-    origin: "http://localhost:3000",
-    // origin: "https://ciao-laguno-1-client.onrender.com",
+    // origin: "http://localhost:3000",
+    origin: "https://ciao-laguno-1-client.onrender.com",
     methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
     credentials: true,
     allowedHeaders: ['Authorization', 'Content-Type'],
