@@ -1,6 +1,8 @@
 // Require the Cloudinary library
 const Cloudinary = require('cloudinary').v2
 
+
+// Upload image to Cloudinary
 const uploadToCloudinary = async (file, folder, height, quality) => {
 
     const options = { folder };
@@ -19,4 +21,14 @@ const uploadToCloudinary = async (file, folder, height, quality) => {
 }
 
 
-module.exports = uploadToCloudinary
+// Delete image from Cloudinary
+const deleteMediaFromCloudinary = async (publicId) => {
+    try {
+        const deleteImage = await Cloudinary.uploader.destroy(publicId);
+        //console.log("delete image : ", deleteImage)
+    } catch (error) {
+        console.log("Error occur while deleting image: ", error);
+    }
+};
+
+module.exports = { uploadToCloudinary, deleteMediaFromCloudinary }

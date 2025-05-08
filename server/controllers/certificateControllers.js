@@ -22,12 +22,13 @@ const createCertificate = async (req, resp) => {
         } else {
 
             // image save in Cloudinary
-            const image = await cloudinary(
+            const image = await cloudinary.uploadToCloudinary(
                 certificate,
                 process.env.FOLDER_NAME,
                 1000,
                 1000
             )
+
 
             const certificateData = await certificateModel.create({
                 certificate: image.secure_url,
@@ -98,13 +99,19 @@ const deleteCertificate = async (req, resp) => {
 
         const certificate = await certificateModel.findById(id);
 
+        const imageId = certificate.certificate.split("/").pop().split(".")[0];
+        const publicId = `${process.env.FOLDER_NAME}/${imageId}`;
+
+
         const gettingEmail = certificate.email;
         const certificateIdDetails = await certificateIdModel.findOne({ email: gettingEmail });
 
         const gettingId = certificateIdDetails.id;
 
+
         await certificateModel.findByIdAndDelete(id);
         await certificateIdModel.findByIdAndDelete(gettingId)
+        await cloudinary.deleteMediaFromCloudinary(publicId);
 
         return resp.status(200).json({
             success: true,
