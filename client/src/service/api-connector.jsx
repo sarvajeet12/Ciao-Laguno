@@ -24,7 +24,7 @@ export const apiConnector = async (method, url, bodyData, headers, params) => {
         // }
         // else {
         //     // Something happened in setting up the request that triggered an Error 
-        //     console.error('Error during request setup:', error.message);
+        // console.error('Error during request setup:', error.message);
         // }
         throw error; // Rethrow the error for further handling if needed }
 
