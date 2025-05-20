@@ -14,7 +14,8 @@ import Certificate from "./components/Dashboard/Certificate";
 import SearchCertificate from "./components/Dashboard/Search-certificate";
 import GenerateCertificateId from "./components/Dashboard/GenerateCertificateId";
 import Profile from "./pages/Profile";
-
+import ForgetPassword from './FrogetPassword';
+import ReserPassword from './ResetPassword;
 
 // Importazione lazy dei componenti delle pagine per il caricamento dinamico
 const Home = lazy(() => import("./pages/Home"));
@@ -69,6 +70,10 @@ function App() {
           <Route path="/dashboard/generate-certificateId" element={<GenerateCertificateId />} />
           {/* user profile page */}
           <Route path="/profile" element={<Profile />} />
+
+            
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/reset-password/:token" element={<ResetPassword />} />
 
         </Routes>
         {/* Footer visualizzato su tutte le pagine */}
