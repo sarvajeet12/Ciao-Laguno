@@ -7,6 +7,6 @@
 </head>
 <body>
   <div id="root"></div>
-  <h6> forgot password</h6>
+
 </body>
 </html>
